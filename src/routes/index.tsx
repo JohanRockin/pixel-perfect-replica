@@ -298,12 +298,14 @@ function InfoCell({
   sub,
   last,
   tz,
+  largeSub,
 }: {
   label: string;
   value: string;
   sub?: string;
   last?: boolean;
   tz?: string;
+  largeSub?: boolean;
 }) {
   return (
     <div
@@ -314,7 +316,11 @@ function InfoCell({
       <div className="label-tech text-[var(--slate-black)]/55 mb-6">{label}</div>
       <div className="text-editorial text-5xl md:text-7xl" style={{ fontVariantNumeric: "lining-nums tabular-nums", fontStyle: "normal" }}>{value}</div>
       {tz ? <div className="mt-1 label-tech text-[var(--slate-black)]/45">{tz}</div> : null}
-      {sub ? <div className="mt-4 text-[var(--slate-black)]/70">{sub}</div> : null}
+      {sub ? (
+        <div className={`mt-2 ${largeSub ? "text-editorial text-3xl md:text-5xl text-[var(--slate-black)]" : "text-[var(--slate-black)]/70"}`}>
+          {sub}
+        </div>
+      ) : null}
     </div>
   );
 }
