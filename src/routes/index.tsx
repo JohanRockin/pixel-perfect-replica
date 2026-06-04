@@ -158,7 +158,7 @@ function Index() {
           </div>
 
           <div className="relative grid grid-cols-1 md:grid-cols-3 reveal-up neon-grid-top">
-            <InfoCell label="Fecha" value="11" sub="de junio 2026" />
+            <InfoCell label="Fecha" value="11" sub="de junio 2026" largeSub />
             <InfoCell label="Hora" value="6:00 PM" />
             <InfoCell label="Lugar" value="Plaza Downtown" sub="Costa del Este, Panamá" last />
           </div>
@@ -177,10 +177,10 @@ function Index() {
             width={1920}
             height={1280}
             loading="lazy"
-            className="h-full w-full object-cover opacity-80"
+            className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--slate-black)]/75 via-[var(--slate-black)]/25 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--slate-black)]/85 via-transparent to-[var(--slate-black)]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--slate-black)]/45 via-[var(--slate-black)]/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--slate-black)]/60 via-transparent to-[var(--slate-black)]/15" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-[1680px] px-6 md:px-10">
@@ -298,12 +298,14 @@ function InfoCell({
   sub,
   last,
   tz,
+  largeSub,
 }: {
   label: string;
   value: string;
   sub?: string;
   last?: boolean;
   tz?: string;
+  largeSub?: boolean;
 }) {
   return (
     <div
@@ -314,7 +316,11 @@ function InfoCell({
       <div className="label-tech text-[var(--slate-black)]/55 mb-6">{label}</div>
       <div className="text-editorial text-5xl md:text-7xl" style={{ fontVariantNumeric: "lining-nums tabular-nums", fontStyle: "normal" }}>{value}</div>
       {tz ? <div className="mt-1 label-tech text-[var(--slate-black)]/45">{tz}</div> : null}
-      {sub ? <div className="mt-4 text-[var(--slate-black)]/70">{sub}</div> : null}
+      {sub ? (
+        <div className={`mt-2 ${largeSub ? "text-editorial text-3xl md:text-5xl text-[var(--slate-black)]" : "text-[var(--slate-black)]/70"}`}>
+          {sub}
+        </div>
+      ) : null}
     </div>
   );
 }
