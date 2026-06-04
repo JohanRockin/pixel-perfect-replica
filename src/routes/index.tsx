@@ -158,7 +158,7 @@ function Index() {
           </div>
 
           <div className="relative grid grid-cols-1 md:grid-cols-3 reveal-up neon-grid-top">
-            <InfoCell label="Fecha" value="11" sub="de junio 2026" largeSub />
+            <InfoCell label="Fecha" value="11 de junio" sub="2026" smallSub />
             <InfoCell label="Hora" value="6:00 PM" />
             <InfoCell label="Lugar" value="Plaza Downtown" sub="Costa del Este, Panamá" last />
           </div>
@@ -299,6 +299,7 @@ function InfoCell({
   last,
   tz,
   largeSub,
+  smallSub,
 }: {
   label: string;
   value: string;
@@ -306,6 +307,7 @@ function InfoCell({
   last?: boolean;
   tz?: string;
   largeSub?: boolean;
+  smallSub?: boolean;
 }) {
   return (
     <div
@@ -317,7 +319,7 @@ function InfoCell({
       <div className="text-editorial text-5xl md:text-7xl" style={{ fontVariantNumeric: "lining-nums tabular-nums", fontStyle: "normal" }}>{value}</div>
       {tz ? <div className="mt-1 label-tech text-[var(--slate-black)]/45">{tz}</div> : null}
       {sub ? (
-        <div className={`mt-2 ${largeSub ? "text-editorial text-3xl md:text-5xl text-[var(--slate-black)]" : "text-[var(--slate-black)]/70"}`}>
+        <div className={`mt-2 ${largeSub ? "text-editorial text-3xl md:text-5xl text-[var(--slate-black)]" : smallSub ? "text-editorial text-lg md:text-2xl text-[var(--slate-black)]/60" : "text-[var(--slate-black)]/70"}`}>
           {sub}
         </div>
       ) : null}
