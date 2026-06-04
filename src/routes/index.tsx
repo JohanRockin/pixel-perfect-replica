@@ -177,10 +177,10 @@ function Index() {
             width={1920}
             height={1280}
             loading="lazy"
-            className="h-full w-full object-cover opacity-80"
+            className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--slate-black)]/75 via-[var(--slate-black)]/25 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--slate-black)]/85 via-transparent to-[var(--slate-black)]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--slate-black)]/45 via-[var(--slate-black)]/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--slate-black)]/60 via-transparent to-[var(--slate-black)]/15" />
         </div>
 
         <div className="relative z-10 mx-auto max-w-[1680px] px-6 md:px-10">
