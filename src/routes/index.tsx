@@ -6,7 +6,7 @@ import { RegistrationForm } from "@/components/RegistrationForm";
 import { Toaster } from "@/components/ui/sonner";
 import { useReveal } from "@/hooks/use-reveal";
 import heroImg from "@/assets/hero-runners.jpg";
-import afterRunAsset from "@/assets/after-run-new.jpg.asset.json";
+import afterRunAsset from "@/assets/after-run.webp";
 import eventRunner from "@/assets/event-runner.jpg";
 import p1 from "@/assets/product-1.jpg";
 import p2 from "@/assets/product-2.jpg";
@@ -14,9 +14,9 @@ import p3 from "@/assets/product-3.jpg";
 import p4 from "@/assets/product-4.jpg";
 import filaNeon from "@/assets/fila-neon-logo.png";
 import runPizzaGraphic from "@/assets/run-pizza-graphic.png";
-import bannerRunPizza from "@/assets/imagen-banner.png.asset.json";
+import bannerRunPizza from "@/assets/banner.webp";
 
-const afterRun = afterRunAsset.url;
+const afterRun = afterRunAsset;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -62,7 +62,7 @@ function Index() {
       {/* HERO BANNER */}
       <section className="relative w-full bg-[var(--slate-black)] pt-20 md:pt-24">
         <img
-          src={bannerRunPizza.url}
+          src={bannerRunPizza}
           alt="FILA Run & Pizza — Sportline"
           width={1985}
           height={650}
