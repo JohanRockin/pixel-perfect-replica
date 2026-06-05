@@ -279,9 +279,13 @@ function Index() {
 
           {/* CTA below carousel */}
           <div className="mt-16 flex items-center justify-center reveal-up">
-            <a href="https://filalatin.com/collections/running" className="cta-pill cta-pill-outline text-[var(--slate-black)]">
-              Ver productos FILA
-            </a>
+            <a 
+  href="https://filalatin.com/collections/running"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  Ver productos FILA
+</a>
           </div>
         </div>
       </section>
