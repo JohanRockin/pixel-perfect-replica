@@ -110,7 +110,7 @@ export function RegistrationForm() {
           defaultValue=""
         />
       </div>
-<input type="hidden" name="tags" value="654697" />
+<input type="hidden" name="MMERGE10" value="654697" />
       <div className="md:col-span-2 pt-6 flex justify-center md:justify-start">
         <button type="submit" className="cta-pill cta-pill-red px-10 py-5">
           <span>Confirmar inscripción</span>
